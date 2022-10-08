@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/public/css/styles.css" />
+		<title>Chat</title>
+	</head>
+	<body>
+
+		<h1>Create a group</h1>
+		<form action="/sendMessage" method="post">
+			<div class="form-group">
+				<label for="number">Enter enter a group name</label>
+				<input type="text" id="gname" name="gname">
+			</div>
+			<input type="submit" value="Send Message">
+		</form>
+
+
+		
+		<div class="join-outerContainer">
+			<div class="join-innerContainer">
+				<h1 class="join-heading">Relief camps chats</h1>
+				<form action="chat.html">
+					<div class="form-control">
+						<input
+							type="text"
+							name="username"
+							id="username"
+							class=join-input
+							placeholder="Enter username"
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<select name="room" id="room" class="join-input mt-20">
+							<option value="Camp1">Camp1</option>
+							<option value="Camp2">Camp2</option>
+							<option value="Camp3">Camp3</option>
+							<option value="Camp4">Camp4</option>
+							<option value="Camp5">Camp5</option>
+							<option value="Camp6">Camp6</option>
+							<option value="Camp7">Camp7</option>
+							<option value="Camp8">Camp8</option>
+							<option value="Camp9">Camp9</option>
+							<option value="Camp10">Camp10</option>
+							<option value="Camp11">Camp11</option>
+							<option value="Camp12">Camp12</option>
+						</select>
+					</div>
+					<button class="join-button mt-20" type="submit">Enter chat</button>
+				</form>
+			</div>
+			<img src='imgs/chat.png' alt="join page logo" class="join-img"/>
+
+			<script>
+				var gname = document.getElementById('#room');
+				var option = document.createElement("option");
+	  option.text ="<%= gname%>" ;
+	  option.setAttribute("value","<%= gname%>")
+	  gname.add(option);
+			</script>
+	</body>
+</html>
